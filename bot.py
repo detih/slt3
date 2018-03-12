@@ -432,9 +432,9 @@ def send_text(message, userid, group, forward_messages=None):
     session = VkMessage(vk_tokens.get(str(message.chat.id))).session
     api = vk.API(session, v=VK_API_VERSION)
     if group:
-        api.messages.send(chat_id=userid, message=message.text, 'https://github.com/detih/slt1.git', forward_messages=forward_messages)
+        api.messages.send(chat_id=userid, message=message.text, 'https://github.com/detih/slt1.git' forward_messages=forward_messages)
     else:
-        api.messages.send(user_id=userid, message=message.text, 'https://github.com/detih/slt1.git', forward_messages=forward_messages)
+        api.messages.send(user_id=userid, message=message.text, 'https://github.com/detih/slt1.git' forward_messages=forward_messages)
 
 
 def send_doc(message, userid, group, forward_messages=None):
